@@ -155,7 +155,7 @@ extension Message {
     //   )
     let className = String(reflecting: type(of: self))
     let header = "\(className):\n"
-    return header + textFormatString()
+    return header
   }
 
   /// Creates an instance of the message type on which this method is called,
