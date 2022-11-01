@@ -14,22 +14,10 @@ import PackageDescription
 let package = Package(
   name: "SwiftProtobuf",
   products: [
-    .executable(name: "protoc-gen-swift", targets: ["protoc-gen-swift"]),
-    .library(name: "MinimalSwiftProtobuf", targets: ["SwiftProtobuf"]),
-    .library(name: "MinimalSwiftProtobufPluginLibrary", targets: ["SwiftProtobufPluginLibrary"]),
+    .library(name: "MinimalSwiftProtobuf", targets: ["MinimalSwiftProtobuf"])
   ],
   targets: [
-    .target(name: "SwiftProtobuf"),
-    .target(name: "SwiftProtobufPluginLibrary",
-            dependencies: ["SwiftProtobuf"]),
-    .target(name: "protoc-gen-swift",
-            dependencies: ["SwiftProtobufPluginLibrary", "SwiftProtobuf"]),
-    .target(name: "Conformance",
-            dependencies: ["SwiftProtobuf"]),
-    .testTarget(name: "SwiftProtobufTests",
-                dependencies: ["SwiftProtobuf"]),
-    .testTarget(name: "SwiftProtobufPluginLibraryTests",
-                dependencies: ["SwiftProtobufPluginLibrary"]),
+    .target(name: "MinimalSwiftProtobuf")
   ],
   swiftLanguageVersions: [.v4, .v4_2, .version("5")]
 )
