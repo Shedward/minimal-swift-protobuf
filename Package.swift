@@ -14,10 +14,10 @@ import PackageDescription
 let package = Package(
   name: "SwiftProtobuf",
   products: [
-    .library(name: "MinimalSwiftProtobuf", targets: ["MinimalSwiftProtobuf"])
+    .library(name: "SwiftProtobuf", targets: ["SwiftProtobuf"])
   ],
   targets: [
-    .target(name: "MinimalSwiftProtobuf")
+    .target(name: "SwiftProtobuf")
   ],
   swiftLanguageVersions: [.v4, .v4_2, .version("5")]
 )

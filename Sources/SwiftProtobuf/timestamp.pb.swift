@@ -44,8 +44,8 @@ import Foundation
 // incompatible with the version of SwiftProtobuf to which you are linking.
 // Please ensure that you are building against the same version of the API
 // that was used to generate this file.
-fileprivate struct _GeneratedWithProtocGenSwiftVersion: MinimalSwiftProtobuf.ProtobufAPIVersionCheck {
-  struct _2: MinimalSwiftProtobuf.ProtobufAPIVersion_2 {}
+fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAPIVersionCheck {
+  struct _2: SwiftProtobuf.ProtobufAPIVersion_2 {}
   typealias Version = _2
 }
 
@@ -156,7 +156,7 @@ public struct Google_Protobuf_Timestamp {
   /// inclusive.
   public var nanos: Int32 = 0
 
-  public var unknownFields = MinimalSwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   public init() {}
 }
@@ -169,10 +169,10 @@ extension Google_Protobuf_Timestamp: @unchecked Sendable {}
 
 fileprivate let _protobuf_package = "google.protobuf"
 
-extension Google_Protobuf_Timestamp: MinimalSwiftProtobuf.Message, MinimalSwiftProtobuf._MessageImplementationBase {
+extension Google_Protobuf_Timestamp: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase {
   public static let protoMessageName: String = _protobuf_package + ".Timestamp"
 
-  public mutating func decodeMessage<D: MinimalSwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -185,7 +185,7 @@ extension Google_Protobuf_Timestamp: MinimalSwiftProtobuf.Message, MinimalSwiftP
     }
   }
 
-  public func traverse<V: MinimalSwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.seconds != 0 {
       try visitor.visitSingularInt64Field(value: self.seconds, fieldNumber: 1)
     }
